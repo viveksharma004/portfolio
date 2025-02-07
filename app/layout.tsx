@@ -1,7 +1,9 @@
+"use client"
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
+import { BrowserRouter } from "react-router-dom";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +25,11 @@ export default function RootLayout({
       >
         <div className="absolute top-[-6rem] -z-20 right-[11rem] h-[25.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:blur-[16rem] sm:w-[34.75rem] bg-[#773966]"></div>
         <div className="absolute top-[-1rem] -z-20 left-[-35rem] h-[41.25rem] sm:h-[31.25rem] w-[50rem] rounded-full blur-[14rem] sm:blur-[16rem] sm:w-[48.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] bg-[#3c2c5a]"></div>
-
-        <Header />
-        {children}
-        <Footer />
+        <BrowserRouter>
+          <Header />
+          {children}
+          <Footer />
+        </BrowserRouter>
       </body>
     </html>
   );

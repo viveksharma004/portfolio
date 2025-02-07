@@ -9,7 +9,7 @@ export default function About() {
     <div className="relative">
       <SectionHeading>About</SectionHeading>
       <section
-        className="mb-6 max-w-[45rem] lg:flex items-center text-center leading-7 sm:mb-12 scroll-mt-28 relative"
+        className="mb-6 max-w-[50rem] lg:flex items-center text-center leading-7 sm:mb-12 scroll-mt-28 relative"
         id="about"
       >
         <div className="m-5 ml-2">
@@ -31,7 +31,7 @@ export default function About() {
           <p className="mb-6 text-lg lg:text-left ">
             Frameworks and Libraries: <span className="font-bold text-[#efefab]">ReactJs, ExpressJs, Redux, MongoDB</span>
           </p>
-          <p className="mb-6 text-lg lg:text-left ">Tools :<span className="font-bold text-[#efefab]">git/github, VS Code, 0Auth</span></p>
+          <p className="mb-6 text-lg lg:text-left ">Current Role :<span className="font-bold text-[#e8e84b]">Frontend Developer Intern</span></p>
         </div>
         <div className="flex justify-center items-center relative">
           <Image

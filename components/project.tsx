@@ -4,6 +4,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 import { FiGithub } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -15,28 +16,32 @@ export default function Project({
   githubUrl,
   liveUrl,
 }: ProjectProps) {
+  const navigate=useNavigate();
   return (
     <div
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="max-w-[44rem] border rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] transition border-white/20 text-white bg-black">
+      <section className="max-w-[50rem] border rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] transition border-white/20 text-white bg-black">
+        <Link to={liveUrl}>
+          <Image
+            src={imageUrl}
+            alt={title}
+            quality={95}
+            priority
+            className="object-contain absolute hidden sm:block -top-1 -right-40 w-[30.25rem] rounded-none shadow-2xl
+            transition 
+            group-hover:scale-[1.03]
+            group-hover:-translate-x-2
+            group-hover:translate-y-2
+            "
+          />
 
-      <Image
-          src={imageUrl}
-          alt={title}
-          quality={95}
-          priority
-          className="object-contain absolute hidden sm:block -top-1 -right-40 w-[30.25rem] rounded-none shadow-2xl
-          transition 
-          group-hover:scale-[1.03]
-          group-hover:-translate-x-2
-          group-hover:translate-y-2
-          "
-        />
+        </Link>
+       
 
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full">
+        <div className="pt-3 pb-7 px-4 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <ul className="flex flex-wrap gap-2 mt-2 mb-4">
+          <ul className="flex flex-wrap gap-2 mt-2 mb-3">
             {tags.map((tag, index) => (
               <li
                 className="bg-white/10 px-3 py-1 text-[0.6rem] tracking-wider rounded-sm flex flex-wrap justify-center gap-2 text-xs text-white/90"
@@ -47,7 +52,7 @@ export default function Project({
             ))}
           </ul>
 
-          <p className="mt-2 mb-6 leading-relaxed text-white/70">
+          <p className="mt-2 mb-4 leading-relaxed text-[14px] text-white/70">
             {description}
           </p>
           <div className="flex items-center gap-3">

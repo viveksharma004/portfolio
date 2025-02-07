@@ -2,7 +2,7 @@ import resumeBuilder from "@/public/ResumeBuilder.png";
 import frontPage from "@/public/frontPage.png"
 import commercialStore from "@/public/commercialStore.png"
 import askImage from "@/public/AskImage.png"
-
+import studyNotion from "@/public/StudyNotion.png";
 export const links = [
   {
     name: "Home",
@@ -13,12 +13,25 @@ export const links = [
     hash: "#about",
   },
   {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
     name: "Projects",
     hash: "#projects",
   },
 ] as const;
 
 export const projectsData = [
+  {
+    title: "StudyNotion An Ed-Tech Platform",
+    description:
+      "StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content.",
+    tags: ["React", "NodeJs","ExpressJs","MongoDB","Redux","AuthN","AuthZ"],
+    imageUrl: studyNotion,
+    githubUrl: 'https://github.com/viveksharma004/Ed-Tech-Frontend',
+    liveUrl: 'https://study-notion-vivek.vercel.app/'
+  },
   {
     title: "Know Your Image",
     description:

@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Intro() {
   return (
     <section
       id="home"
-      className="mb-[20rem] max-w-[50rem] mt-[8rem] sm:mt-0 sm:mb-0 scroll-mt-[100rem]"
+      className="mb-[20rem] max-w-[55rem] mt-[8rem] sm:mt-0 sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -76,6 +77,15 @@ export default function Intro() {
         >
           <MdEmail />
         </a>
+
+        <a
+          className="p-4 flex items-center gap-2 rounded-full focus:scale-[1.10] hover:scale-[1.10] active:scale-105 transition cursor-pointer border bg-black text-white/80 border-white/10"
+          href="https://leetcode.com/vivekshrarma004"
+          target="_blank"
+        >
+          <SiLeetcode />
+        </a>
+
       </motion.div>
     </section>
   );
