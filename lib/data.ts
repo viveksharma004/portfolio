@@ -2,7 +2,8 @@ import resumeBuilder from "@/public/ResumeBuilder.png";
 import frontPage from "@/public/frontPage.png"
 import commercialStore from "@/public/commercialStore.png"
 import askImage from "@/public/AskImage.png"
-import studyNotion from "@/public/StudyNotion.png";
+import studyNotion from "@/public/studyNotion.png";
+
 export const links = [
   {
     name: "Home",
