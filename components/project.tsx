@@ -4,7 +4,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { GoLinkExternal } from "react-icons/go";
 import { FiGithub } from "react-icons/fi";
-import { Link, useNavigate } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -16,13 +16,13 @@ export default function Project({
   githubUrl,
   liveUrl,
 }: ProjectProps) {
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
   return (
     <div
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section className="max-w-[50rem] border rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] transition border-white/20 text-white bg-black">
-        <Link to={liveUrl}>
+        {/* <Link to={liveUrl}> */}
           <Image
             src={imageUrl}
             alt={title}
@@ -36,7 +36,7 @@ export default function Project({
             "
           />
 
-        </Link>
+        {/* </Link> */}
        
 
         <div className="pt-3 pb-7 px-4 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full">
